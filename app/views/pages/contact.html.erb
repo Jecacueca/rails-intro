@@ -1,0 +1,15 @@
+<h2>Contact the teachers at LW:</h2>
+
+<form action="/contact" method="get">
+  <!-- name="teacher" means our params key will be teacher -->
+  <input type="text" name="teacher" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @teachers.each do |name| %>
+    <li><%= name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Back", root_path %>
